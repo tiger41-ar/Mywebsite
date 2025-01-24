@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز مركبة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 0;
+        }
+        section {
+            padding: 20px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form select, form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        form button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #4500b5;
+        }
+        footer {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>حجز مركبة</h1>
+    </header>
+    <section>
+        <h2>املأ البيانات التالية:</h2>
+        <form onsubmit="redirectToInstructions(event)">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+            
+            <label for="contact">وسيلة الاتصال:</label>
+            <input type="text" id="contact" name="contact" placeholder="البريد الإلكتروني أو رقم الهاتف" required>
+            
+            <label for="vehicle">نوع المركبة:</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="lexus_720">لكزس / ا ئ ه 720</option>
+                <option value="lexus_7715">لكزس / رك د 7715</option>
+                <option value="mercedes_340">مرسيدس / ع د ل 340</option>
+                <option value="camry_4436">كامريز / ر ك ن 4436</option>
+                <option value="hilux_2">هايلكوز / ص س ص 2</option>
+                <option value="mazda_new">جديدز! مازدا</option>
+            </select>
+            
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+
+    <script>
+        function redirectToInstructions(event) {
+            event.preventDefault(); // منع السلوك الافتراضي للنموذج
+            window.location.href = "instructions.html"; // نقل المستخدم إلى صفحة التعليمات
+        }
+    </script>
+</body>
+</html>
